@@ -32,6 +32,7 @@ public class BreathingManager : MonoBehaviour
     private bool isPaused = false;           // Pause state
     private int successfulPhases = 0;        // Tracks successful inhale/exhale cycles
     private int totalPhases = 0;             // Tracks all attempted cycles
+    float gainFactor = CalibrationPopUp.gainFactor;
 
     void Start()
     {
@@ -55,7 +56,8 @@ public class BreathingManager : MonoBehaviour
         }
 
         // Microphone volume reading
-        float volume = GetMaxVolume();
+        float volume = GetMaxVolume() * gainFactor;
+        print(volume);
         if (volumeSlider != null)
             volumeSlider.value = volume;
 
