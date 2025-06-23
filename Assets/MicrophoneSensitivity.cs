@@ -8,7 +8,7 @@ public class MicrophoneSensitivity : MonoBehaviour
 
     public Slider sensitivitySlider; // Drag the slider in the Unity editor
     public TMP_Text loudnessInfo;             // Shows the average Volume
-    public static float boost = 0.1f;
+    public static float boost = 0.01f;
     public TMP_Text boostInfo;
     private string micDevice;
     private AudioClip micClip;
@@ -16,6 +16,7 @@ public class MicrophoneSensitivity : MonoBehaviour
     private float[] samples;
     public Button startCalibrationButton;
     private bool isCalibrating = false;
+    public AudioSource backgroundMusic;
 
 
     void Start()
@@ -49,20 +50,28 @@ public class MicrophoneSensitivity : MonoBehaviour
 
     void Update()
     {
-        boostInfo.text = boost.ToString();
+        boostInfo.text = $"Verstärkung: {boost:F2}";
     }
 
     IEnumerator StartCal()
-{
-    isCalibrating = true;
-    micClip = Microphone.Start(micDevice, false, 3, 44100);  // Aufnahme startet
-    loudnessInfo.text = "Bitte atmen...";
-    
-    yield return new WaitForSeconds(3.1f);  // Warte, bis Aufnahme vorbei ist
-    GetLoudnessFromMicrophone();           // Jetzt analysieren
-    
-    isCalibrating = false;
-}
+    {
+        if (backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Stop();
+        }
+        isCalibrating = true;
+        micClip = Microphone.Start(micDevice, false, 3, 44100);  // Aufnahme startet
+        loudnessInfo.text = "Bitte ausatmen...";
+        
+        yield return new WaitForSeconds(3.1f);  // Warte, bis Aufnahme vorbei ist
+        GetLoudnessFromMicrophone();           // Jetzt analysieren
+        
+        isCalibrating = false;
+        if (!backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Play();
+        }
+    }
 
     // Calculate the loudness from the microphone input
     private void GetLoudnessFromMicrophone()
@@ -80,7 +89,7 @@ public class MicrophoneSensitivity : MonoBehaviour
 
         for (int i = 0; i < samples.Length; i++)
         {
-            float val = samples[i];
+            float val = samples[i] + boost; // Apply the boost factor
             sum += Mathf.Abs(val);
             if (val > max) max = val;
             if (val < min) min = val;

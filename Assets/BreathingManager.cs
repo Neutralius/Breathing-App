@@ -32,8 +32,8 @@ public class BreathingManager : MonoBehaviour
     private bool isPaused = false;           // Pause state
     private int successfulPhases = 0;        // Tracks successful inhale/exhale cycles
     private int totalPhases = 0;             // Tracks all attempted cycles
-    float gainFactor = MicrophoneSensitivity.boost;
-
+    float gainFactor = 0.01f; // Gain factor for microphone sensitivity
+    public AudioSource backgroundMusic;
     void Start()
     {
         feedbackText.text = "";
@@ -43,8 +43,16 @@ public class BreathingManager : MonoBehaviour
 
     void Update()
     {
+        gainFactor = MicrophoneSensitivity.boost;
         if (!isSessionActive || isPaused || micClip == null) return;
-
+        if (isSessionActive)
+        {
+            backgroundMusic.Stop();
+        }
+        else
+        {
+            backgroundMusic.Play();
+        }
         // Update timer
         remainingTime -= Time.deltaTime;
         timerText.text = "Time left: " + Mathf.CeilToInt(remainingTime) + "s";
@@ -56,7 +64,7 @@ public class BreathingManager : MonoBehaviour
         }
 
         // Microphone volume reading
-        float volume = GetMaxVolume() * gainFactor;
+        float volume = GetMaxVolume();
         print(gainFactor);
         if (volumeSlider != null)
             volumeSlider.value = volume;
@@ -107,6 +115,7 @@ public class BreathingManager : MonoBehaviour
     // Starts the breathing session
     void StartSession()
     {
+        
         micDevice = Microphone.devices[0];
         micClip = Microphone.Start(micDevice, true, 10, 44100);
         while (!(Microphone.GetPosition(micDevice) > 0)) { }  // wait for mic
@@ -117,6 +126,7 @@ public class BreathingManager : MonoBehaviour
         totalPhases = 0;
         feedbackText.text = "";
         ShowSessionUI();
+
     }
 
     // Pause/resume logic
