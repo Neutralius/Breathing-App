@@ -97,6 +97,7 @@ public class BreathingManager : MonoBehaviour
     // Get the highest volume in the audio sample
     float GetMaxVolume()
     {
+        //float gainFactor = Mathf.Max(1f, MicrophoneSensitivity.boost);
         float maxLevel = 0f;
         float[] samples = new float[sampleWindow];
         int micPosition = Microphone.GetPosition(micDevice) - sampleWindow + 1;
@@ -106,6 +107,9 @@ public class BreathingManager : MonoBehaviour
         for (int i = 0; i < sampleWindow; ++i)
         {
             float wavePeak = Mathf.Abs(samples[i]);
+            if (wavePeak > 0.001f)
+            wavePeak += gainFactor;
+
             if (wavePeak > maxLevel)
                 maxLevel = wavePeak;
         }
