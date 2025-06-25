@@ -49,6 +49,9 @@ public class BreathingApp : MonoBehaviour
 
     private string selectedExercise = "";     // Stores which breathing exercise was chosen
 
+    float gainFactor = 0.01f; // Gain factor for microphone sensitivity
+    public AudioSource backgroundMusic;
+
     // ---------- Initialization ----------
 
     void Start()
@@ -64,6 +67,15 @@ public class BreathingApp : MonoBehaviour
 
     void Update()
     {
+        gainFactor = MicrophoneSensitivity.boost;
+        if (isSessionActive)
+        {
+            backgroundMusic.Stop();
+        }
+        else
+        {
+            backgroundMusic.Play();
+        }
         if (!isSessionActive || isPaused || micClip == null) return;
 
         // Countdown timer
@@ -118,6 +130,8 @@ public class BreathingApp : MonoBehaviour
         foreach (float sample in samples)
         {
             float abs = Mathf.Abs(sample);
+            if (abs > 0.001f)
+            abs += gainFactor;
             if (abs > maxVolume) maxVolume = abs;
         }
         return maxVolume;
@@ -164,18 +178,23 @@ public class BreathingApp : MonoBehaviour
     {
         isPaused = true;
         instructionText.text = "Paused";
+        startButton.gameObject.SetActive(true);
     }
 
     void ResumeSession()
     {
         isPaused = false;
+        startButton.gameObject.SetActive(false);
     }
 
     void StopSession()
     {
         isSessionActive = false;
+        breathingCircle.localScale = Vector3.one;
         feedbackText.text = "Session Stopped.";
         restartButton.gameObject.SetActive(true);
+        startButton.gameObject.SetActive(true);
+        timerText.text = "";
     }
 
     void RestartSession()
