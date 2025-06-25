@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dunkelgelb_0: -7984219499110237895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

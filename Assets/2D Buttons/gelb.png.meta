@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gelb_0: -7192518867487813432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

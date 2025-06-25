@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      palm06_roughness_0: -1648634562713576344
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

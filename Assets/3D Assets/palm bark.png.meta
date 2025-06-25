@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      palm bark_0: 4128673617323775112
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
