@@ -124,6 +124,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 225138670376460366, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
   m_PrefabInstance: {fileID: 510136384}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &11674841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7291886325566346726, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
+  m_PrefabInstance: {fileID: 510136384}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &27849462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,17 +1706,6 @@ Transform:
   - {fileID: 482158241}
   m_Father: {fileID: 269732443}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &762016772 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6221876246759017577, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
-  m_PrefabInstance: {fileID: 510136384}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &766416887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2714,7 +2714,7 @@ PrefabInstance:
     - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
       propertyPath: instructionText
       value: 
-      objectReference: {fileID: 762016772}
+      objectReference: {fileID: 11674841}
     - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
       propertyPath: exerciseSelectionPanel
       value: 

@@ -68,14 +68,6 @@ public class BreathingApp : MonoBehaviour
     void Update()
     {
         gainFactor = MicrophoneSensitivity.boost;
-        if (isSessionActive)
-        {
-            backgroundMusic.Stop();
-        }
-        else
-        {
-            backgroundMusic.Play();
-        }
         if (!isSessionActive || isPaused || micClip == null) return;
 
         // Countdown timer
@@ -141,6 +133,10 @@ public class BreathingApp : MonoBehaviour
 
     void StartSession()
     {
+        if (backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Stop();
+        }
         // Start microphone input
         micDevice = Microphone.devices[0];
         micClip = Microphone.Start(micDevice, true, 10, 44100);
@@ -172,6 +168,12 @@ public class BreathingApp : MonoBehaviour
         feedbackText.text = score >= 50 ? "Well done! " : "Try again ";
 
         restartButton.gameObject.SetActive(true);
+        startButton.gameObject.SetActive(true);
+        timerText.text = "";
+        if (!backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Play();
+        }
     }
 
     void PauseSession()
@@ -179,10 +181,18 @@ public class BreathingApp : MonoBehaviour
         isPaused = true;
         instructionText.text = "Paused";
         startButton.gameObject.SetActive(true);
+        if (!backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Play();
+        }
     }
 
     void ResumeSession()
     {
+         if (backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Stop();
+        }
         isPaused = false;
         startButton.gameObject.SetActive(false);
     }
@@ -195,6 +205,10 @@ public class BreathingApp : MonoBehaviour
         restartButton.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
         timerText.text = "";
+        if (!backgroundMusic.isPlaying)
+        {
+            backgroundMusic.Play();
+        }
     }
 
     void RestartSession()
@@ -212,6 +226,7 @@ public class BreathingApp : MonoBehaviour
         titleText.text = selectedExercise;
 
         // Set specific phase durations based on the selected exercise
+        // TODO: ausbauen und anpassen!
         switch (selectedExercise)
         {
             case "Box Breathing":
