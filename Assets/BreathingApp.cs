@@ -11,16 +11,16 @@ public class BreathingApp : MonoBehaviour
     public GameObject exerciseSelectionPanel; // Panel with 4 exercise options (selection menu)
     public GameObject breathingPanel;         // Main breathing panel (circle, feedback, etc.)
 
-    public TMP_Text  titleText;                    // Displays the selected exercise name
-    public TMP_Text  instructionText;              // Inhale / Exhale guidance text
-    public TMP_Text  feedbackText;                 // Final message after session completion
-    public TMP_Text  timerText;                    // Displays remaining session time
-    public TMP_Text  scoreText;                    // Final score shown after session
+    public TMP_Text titleText;                    // Displays the selected exercise name
+    public TMP_Text instructionText;              // Inhale / Exhale guidance text
+    public TMP_Text feedbackText;                 // Final message after session completion
+    public TMP_Text scoreText;                    // Final score shown after session
 
     public Button startButton;                // Start button to begin the exercise
     public Button pauseButton;                // Pause button to pause/resume
     public Button stopButton;                 // Stop button to end session early
     public Button restartButton;              // Restart button to redo the session
+    public Button soundButton;                // Button to toggle vocal instructions
 
     public RectTransform breathingCircle;     // Animated breathing circle
     public Slider volumeSlider;               // Slider showing microphone input volume
@@ -36,7 +36,7 @@ public class BreathingApp : MonoBehaviour
     private float sessionDuration = 20f;     // Total session time (20 seconds)
     private float remainingTime;              // Countdown timer
 
-    private enum Phase { Inhale, Exhale }
+    private enum Phase { Inhale, Exhale, Hold }
     private Phase currentPhase = Phase.Inhale;
     private float phaseTimer = 0f;
     private float phaseDuration = 2f;        // Default duration per phase (can change based on selected exercise)
@@ -50,7 +50,13 @@ public class BreathingApp : MonoBehaviour
     private string selectedExercise = "";     // Stores which breathing exercise was chosen
 
     float gainFactor = 0.01f; // Gain factor for microphone sensitivity
+    public bool vocalBool = true; // Toggle for vocal instructions
     public AudioSource backgroundMusic;
+    public AudioSource vocalInstructions; // Optional audio source for vocal instructions
+    public AudioClip breathIn;
+    public AudioClip breathOut;
+    public AudioClip holdBreath;
+
 
     // ---------- Initialization ----------
 
@@ -72,7 +78,7 @@ public class BreathingApp : MonoBehaviour
 
         // Countdown timer
         remainingTime -= Time.deltaTime;
-        timerText.text = "Time Left: " + Mathf.CeilToInt(remainingTime) + "s";
+        //timerText.text = "Time Left: " + Mathf.CeilToInt(remainingTime) + "s";
 
         // End session if time runs out
         if (remainingTime <= 0f)
@@ -87,7 +93,21 @@ public class BreathingApp : MonoBehaviour
 
         // Handle breathing phase
         phaseTimer += Time.deltaTime;
-        instructionText.text = currentPhase == Phase.Inhale ? "Inhale..." : "Exhale...";
+        switch (currentPhase)
+        {
+            case Phase.Inhale:
+                if (vocalBool) vocalInstructions.clip = breathIn;
+                instructionText.text = "Inhale..." + (phaseDuration - phaseTimer).ToString("F2");
+                break;
+            case Phase.Hold:
+                if (vocalBool) vocalInstructions.clip = holdBreath;
+                instructionText.text = "Hold..." + (phaseDuration - phaseTimer).ToString("F2");
+                break;
+            case Phase.Exhale:
+                if (vocalBool) vocalInstructions.clip = breathOut;
+                instructionText.text = "Exhale..." + (phaseDuration - phaseTimer).ToString("F2");
+                break;
+        }
 
         // Animate breathing circle size
         float baseScale = currentPhase == Phase.Inhale ? 1f : 2f;
@@ -123,7 +143,7 @@ public class BreathingApp : MonoBehaviour
         {
             float abs = Mathf.Abs(sample);
             if (abs > 0.001f)
-            abs += gainFactor;
+                abs += gainFactor;
             if (abs > maxVolume) maxVolume = abs;
         }
         return maxVolume;
@@ -169,7 +189,6 @@ public class BreathingApp : MonoBehaviour
 
         restartButton.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
-        timerText.text = "";
         if (!backgroundMusic.isPlaying)
         {
             backgroundMusic.Play();
@@ -189,7 +208,7 @@ public class BreathingApp : MonoBehaviour
 
     void ResumeSession()
     {
-         if (backgroundMusic.isPlaying)
+        if (backgroundMusic.isPlaying)
         {
             backgroundMusic.Stop();
         }
@@ -204,7 +223,6 @@ public class BreathingApp : MonoBehaviour
         feedbackText.text = "Session Stopped.";
         restartButton.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
-        timerText.text = "";
         if (!backgroundMusic.isPlaying)
         {
             backgroundMusic.Play();
@@ -286,6 +304,18 @@ public class BreathingApp : MonoBehaviour
     public void GoToWelcome()
     {
         ShowPanel(welcomePanel); // Optional back navigation
+    }
+    
+    public void ToggleVocalInstructions()
+    {
+        if (vocalBool)
+        {
+            vocalBool = false; // Toggle off
+        }
+        else
+        {
+             vocalBool = true;
+        }
     }
 }
 
