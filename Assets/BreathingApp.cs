@@ -39,8 +39,10 @@ public class BreathingApp : MonoBehaviour
     private enum Phase { Inhale, Exhale, Hold }
     private Phase currentPhase = Phase.Inhale;
     private float phaseTimer = 0f;
-    private float phaseDuration = 2f;        // Default duration per phase (can change based on selected exercise)
-
+    private float phaseDuration;         // Duration of each breathing phase
+    private float InhalePhaseDuration;        // Default duration per phase (can change based on selected exercise)
+    private float ExhalePhaseDuration;
+    private float HoldPhaseDuration;  
     private bool isSessionActive = false;
     private bool isPaused = false;
 
@@ -50,7 +52,7 @@ public class BreathingApp : MonoBehaviour
     private string selectedExercise = "";     // Stores which breathing exercise was chosen
 
     float gainFactor = 0.01f; // Gain factor for microphone sensitivity
-    public bool vocalBool = true; // Toggle for vocal instructions
+    public bool vocalBool = false; // Toggle for vocal instructions
     public AudioSource backgroundMusic;
     public AudioSource vocalInstructions; // Optional audio source for vocal instructions
     public AudioClip breathIn;
@@ -97,20 +99,23 @@ public class BreathingApp : MonoBehaviour
         {
             case Phase.Inhale:
                 if (vocalBool) vocalInstructions.clip = breathIn;
-                instructionText.text = "Inhale..." + (phaseDuration - phaseTimer).ToString("F2");
+                instructionText.text = "Inhale..." + (InhalePhaseDuration - phaseTimer).ToString("F2");
+                phaseDuration = InhalePhaseDuration;
                 break;
             case Phase.Hold:
                 if (vocalBool) vocalInstructions.clip = holdBreath;
-                instructionText.text = "Hold..." + (phaseDuration - phaseTimer).ToString("F2");
+                instructionText.text = "Hold..." + (HoldPhaseDuration - phaseTimer).ToString("F2");
+                phaseDuration = HoldPhaseDuration;
                 break;
             case Phase.Exhale:
                 if (vocalBool) vocalInstructions.clip = breathOut;
-                instructionText.text = "Exhale..." + (phaseDuration - phaseTimer).ToString("F2");
+                instructionText.text = "Exhale..." + (ExhalePhaseDuration - phaseTimer).ToString("F2");
+                phaseDuration = ExhalePhaseDuration;
                 break;
         }
 
         // Animate breathing circle size
-        float baseScale = currentPhase == Phase.Inhale ? 1f : 2f;
+        float baseScale = currentPhase == Phase.Inhale ? 2f : 1f;
         float targetScale = baseScale + volume * 3f;
 
         breathingCircle.localScale = Vector3.Lerp(
@@ -118,13 +123,24 @@ public class BreathingApp : MonoBehaviour
             new Vector3(targetScale, targetScale, 1f),
             Time.deltaTime * 4f
         );
-
+    
         // Check if phase duration is completed
         if (phaseTimer >= phaseDuration)
         {
             totalPhases++;
             if (volume > 0.02f) successfulPhases++; // Acceptable volume threshold
-            currentPhase = currentPhase == Phase.Inhale ? Phase.Exhale : Phase.Inhale;
+            switch (currentPhase)
+            {
+                case Phase.Inhale:
+                    currentPhase = Phase.Hold; // Switch to Hold after Inhale
+                    break;
+                case Phase.Hold:
+                    currentPhase = Phase.Exhale; // Switch to Exhale after Hold
+                    break;
+                case Phase.Exhale:
+                    currentPhase = Phase.Inhale; // Switch back to Inhale after Exhale
+                    break;
+            }
             phaseTimer = 0f;
         }
     }
@@ -248,15 +264,30 @@ public class BreathingApp : MonoBehaviour
         switch (selectedExercise)
         {
             case "Box Breathing":
-                phaseDuration = 3f; break;
+                InhalePhaseDuration = 4f;
+                HoldPhaseDuration = 0f;
+                ExhalePhaseDuration = 4f;
+                break;
             case "4-7-8 Method":
-                phaseDuration = 6f; break;
-            case "Equal Breathing":
-                phaseDuration = 1f; break;
-            case "Relaxing Breath":
-                phaseDuration = 5f; break;
+                InhalePhaseDuration = 4f;
+                HoldPhaseDuration = 7f;
+                ExhalePhaseDuration = 8f;
+                break;
+            case "Coherent Breathing": 
+                InhalePhaseDuration = 5f;
+                HoldPhaseDuration = 0f;
+                ExhalePhaseDuration = 5f;
+                break;
+            case "Deep Breathing":
+                InhalePhaseDuration = 4f;
+                HoldPhaseDuration = 4f;
+                ExhalePhaseDuration = 4f;
+                break;
             default:
-                phaseDuration = 2f; break;
+                InhalePhaseDuration = 3f;
+                HoldPhaseDuration = 2f;
+                ExhalePhaseDuration = 4f;
+                break;
         }
 
         ShowPanel(breathingPanel);

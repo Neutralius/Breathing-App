@@ -503,6 +503,135 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &417497691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 417497693}
+  - component: {fileID: 417497692}
+  m_Layer: 0
+  m_Name: Vocal Instructions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &417497692
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417497691}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &417497693
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417497691}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.72761, y: 0, z: 128.2192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1513578128}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &424217281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1020,6 +1149,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.972549
       objectReference: {fileID: 0}
+    - target: {fileID: 179873032356965655, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
+      propertyPath: m_text
+      value: Coherent Breathing
+      objectReference: {fileID: 0}
     - target: {fileID: 214703259382425743, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -55.05726
@@ -1160,6 +1293,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectExercise
       objectReference: {fileID: 0}
+    - target: {fileID: 649483889650555627, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Coherent Breathing
+      objectReference: {fileID: 0}
     - target: {fileID: 655141867454047160, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1276,6 +1413,10 @@ PrefabInstance:
       propertyPath: m_CullTransparentMesh
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2769346140251564352, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
+      propertyPath: m_Name
+      value: CoherentBreathingButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3095096950189917236, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 121.97049
@@ -1303,6 +1444,12 @@ PrefabInstance:
     - target: {fileID: 3098470870592040057, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_Color.r
       value: 0.15264232
+      objectReference: {fileID: 0}
+    - target: {fileID: 3117171450755058706, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
+      propertyPath: m_text
+      value: 'Deep Breathing
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 3195422063263941264, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_Color.b
@@ -1335,6 +1482,10 @@ PrefabInstance:
     - target: {fileID: 4166729278650204942, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SelectExercise
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166729278650204942, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Deep Breathing
       objectReference: {fileID: 0}
     - target: {fileID: 4427078914575108409, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1948,7 +2099,7 @@ GameObject:
   - component: {fileID: 613997636}
   - component: {fileID: 613997637}
   m_Layer: 5
-  m_Name: Audio_EqualBreath
+  m_Name: Audio_CoherentBreath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3811,6 +3962,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2046475600}
     - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
+      propertyPath: vocalBool
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
       propertyPath: stopButton
       value: 
       objectReference: {fileID: 1091983666}
@@ -3818,6 +3973,10 @@ PrefabInstance:
       propertyPath: pauseButton
       value: 
       objectReference: {fileID: 264949105}
+    - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
+      propertyPath: soundButton
+      value: 
+      objectReference: {fileID: 1830547138}
     - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
       propertyPath: startButton
       value: 
@@ -3854,6 +4013,10 @@ PrefabInstance:
       propertyPath: instructionText
       value: 
       objectReference: {fileID: 11674841}
+    - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
+      propertyPath: vocalInstructions
+      value: 
+      objectReference: {fileID: 417497692}
     - target: {fileID: 6588173816526395586, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
       propertyPath: exerciseSelectionPanel
       value: 
@@ -3944,7 +4107,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8707337144866227111, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 417497693}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
 --- !u!114 &1513578127 stripped
@@ -3958,6 +4124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f32748955e1044bdbbf386a06c3d906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &1513578128 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8707337144866227111, guid: e431d084782e4dffb8e84829f56c510e, type: 3}
+  m_PrefabInstance: {fileID: 1513578126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1522177461
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,7 +5206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1830547139}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1513578127}
+        m_TargetAssemblyTypeName: BreathingApp, Assembly-CSharp
+        m_MethodName: ToggleVocalInstructions
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1830547139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5192,7 +5375,7 @@ GameObject:
   - component: {fileID: 1889681327}
   - component: {fileID: 1889681326}
   m_Layer: 5
-  m_Name: HelpEqualBreathing
+  m_Name: HelpCoherentBreathing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
