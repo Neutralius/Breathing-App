@@ -17,11 +17,13 @@ public class CalibrationPopUp : MonoBehaviour
         openPopupButton.onClick.AddListener(() =>
         {
             calibPanel.SetActive(true);
+            openPopupButton.gameObject.SetActive(false);
         });
         
         cancelButton.onClick.AddListener(() =>
         {
             calibPanel.SetActive(false);
+            openPopupButton.gameObject.SetActive(true);
         });
     }
 }
