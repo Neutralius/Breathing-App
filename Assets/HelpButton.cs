@@ -5,6 +5,9 @@ using TMPro;
 public class HelpButton : MonoBehaviour
 {
     public Button helpButton;
+    public Button helpButton2;
+    public Button helpButton3;
+    public Button helpButton4;
     public Button closeButton;
     public AudioSource audioSource;
     public AudioClip helpAudio;
@@ -26,6 +29,10 @@ public class HelpButton : MonoBehaviour
             else
             {
                 helpPanel.SetActive(true);
+                // because of weird bug: Other Help-Buttons are shining through the HelpPanel
+                helpButton2.gameObject.SetActive(false);
+                helpButton3.gameObject.SetActive(false);
+                helpButton4.gameObject.SetActive(false);
                 print(vocalBool);
             }
         });
@@ -33,6 +40,9 @@ public class HelpButton : MonoBehaviour
         closeButton.onClick.AddListener(() =>
         {
             helpPanel.SetActive(false);
+            helpButton2.gameObject.SetActive(true);
+            helpButton3.gameObject.SetActive(true);
+            helpButton4.gameObject.SetActive(true);
         });
 
     }
