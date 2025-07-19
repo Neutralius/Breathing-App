@@ -15,6 +15,7 @@ public class BreathingApp : MonoBehaviour
     public TMP_Text instructionText;              // Inhale / Exhale guidance text
     public TMP_Text feedbackText;                 // Final message after session completion
     public TMP_Text scoreText;                    // Final score shown after session
+    public TMP_Text soundText;                     // Text for sound toggle button
 
     public Button startButton;                // Start button to begin the exercise
     public Button pauseButton;                // Pause button to pause/resume
@@ -38,6 +39,7 @@ public class BreathingApp : MonoBehaviour
 
     private enum Phase { Inhale, Exhale, Hold }
     private Phase currentPhase = Phase.Inhale;
+    private Phase lastPlayedPhase = Phase.Hold; // Last played phase for vocal instructions
     private float phaseTimer = 0f;
     private float phaseDuration;         // Duration of each breathing phase
     private float InhalePhaseDuration;        // Default duration per phase (can change based on selected exercise)
@@ -77,6 +79,14 @@ public class BreathingApp : MonoBehaviour
 
     void Update()
     {
+        if (vocalBool)
+        {
+            soundText.text = "Sound: ON";
+        }
+        else
+        {
+            soundText.text = "Sound: OFF";
+        }
         gainFactor = MicrophoneSensitivity.boost;
         if (!isSessionActive || isPaused || micClip == null) return;
 
@@ -97,20 +107,36 @@ public class BreathingApp : MonoBehaviour
 
         // Handle breathing phase
         phaseTimer += Time.deltaTime;
-        switch (currentPhase)
-        {
+        switch (currentPhase){
             case Phase.Inhale:
-                if (vocalBool) vocalInstructions.clip = breathIn;
+                if (vocalBool && lastPlayedPhase != Phase.Inhale)
+                {
+                    vocalInstructions.clip = breathIn;
+                    vocalInstructions.Play();
+                    lastPlayedPhase = Phase.Inhale;
+                }
                 instructionText.text = "Inhale..." + (InhalePhaseDuration - phaseTimer).ToString("F2");
                 phaseDuration = InhalePhaseDuration;
                 break;
+
             case Phase.Hold:
-                if (vocalBool) vocalInstructions.clip = holdBreath;
+                if (vocalBool && lastPlayedPhase != Phase.Hold)
+                {
+                    vocalInstructions.clip = holdBreath;
+                    vocalInstructions.Play();
+                    lastPlayedPhase = Phase.Hold;
+                }
                 instructionText.text = "Hold..." + (HoldPhaseDuration - phaseTimer).ToString("F2");
                 phaseDuration = HoldPhaseDuration;
                 break;
+
             case Phase.Exhale:
-                if (vocalBool) vocalInstructions.clip = breathOut;
+                if (vocalBool && lastPlayedPhase != Phase.Exhale)
+                {
+                    vocalInstructions.clip = breathOut;
+                    vocalInstructions.Play();
+                    lastPlayedPhase = Phase.Exhale;
+                }
                 instructionText.text = "Exhale..." + (ExhalePhaseDuration - phaseTimer).ToString("F2");
                 phaseDuration = ExhalePhaseDuration;
                 break;
@@ -331,6 +357,10 @@ public class BreathingApp : MonoBehaviour
 
     public void GoToExerciseSelection()
     {
+        if (vocalBool)
+        {
+            vocalInstructions.Play();
+        }
         ShowPanel(exerciseSelectionPanel); // Navigate from welcome to exercise choice
     }
 
@@ -347,7 +377,7 @@ public class BreathingApp : MonoBehaviour
         }
         else
         {
-             vocalBool = true;
+            vocalBool = true;
         }
     }
 }

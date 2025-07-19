@@ -14,16 +14,19 @@ public class HelpButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        helpPanel.SetActive(false); // Ensure the help panel is hidden at start
         helpButton.onClick.AddListener(() =>
         {
             if (vocalBool)
             {
                 audioSource.clip = helpAudio;
                 audioSource.Play();
+                print(vocalBool);
             }
             else
             {
                 helpPanel.SetActive(true);
+                print(vocalBool);
             }
         });
 
@@ -37,6 +40,6 @@ public class HelpButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        vocalBool = BreathingApp.vocalBool;
     }
 }
