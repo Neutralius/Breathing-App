@@ -52,12 +52,13 @@ public class BreathingApp : MonoBehaviour
     private string selectedExercise = "";     // Stores which breathing exercise was chosen
 
     float gainFactor = 0.01f; // Gain factor for microphone sensitivity
-    public bool vocalBool = false; // Toggle for vocal instructions
+    public static bool vocalBool = false; // Toggle for vocal instructions
     public AudioSource backgroundMusic;
     public AudioSource vocalInstructions; // Optional audio source for vocal instructions
     public AudioClip breathIn;
     public AudioClip breathOut;
     public AudioClip holdBreath;
+    public AudioClip welcomeAudio; 
 
 
     // ---------- Initialization ----------
@@ -65,6 +66,7 @@ public class BreathingApp : MonoBehaviour
     void Start()
     {
         // Start with welcome panel visible
+        vocalInstructions.clip = welcomeAudio;
         ShowPanel(welcomePanel);
         HideAllExcept(welcomePanel);
         SetupButtons();
