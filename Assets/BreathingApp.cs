@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Android; // For microphone permissions
 
 public class BreathingApp : MonoBehaviour
 {
@@ -67,6 +68,12 @@ public class BreathingApp : MonoBehaviour
 
     void Start()
     {
+        {
+        if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+        {
+            Permission.RequestUserPermission(Permission.Microphone);
+        }
+}
         // Start with welcome panel visible
         vocalInstructions.clip = welcomeAudio;
         ShowPanel(welcomePanel);

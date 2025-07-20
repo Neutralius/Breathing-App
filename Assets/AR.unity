@@ -1133,7 +1133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3eba1889400ba2a4193b49582df4b866, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9200006
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3eba1889400ba2a4193b49582df4b866, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3180,7 +3180,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35e20c3ffba057ceb942d5ccd171490f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4699998
+      value: -2.0399992
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 35e20c3ffba057ceb942d5ccd171490f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3216,7 +3216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 35e20c3ffba057ceb942d5ccd171490f, type: 3}
       propertyPath: m_Name
-      value: palme2
+      value: palme 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4272,7 +4272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cde77c168145787ba32c6ea1e81b3b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4700003
+      value: -2.0399997
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8cde77c168145787ba32c6ea1e81b3b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6882,7 +6882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7508b0d3471d35c54977db6c94c2ce4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4700007
+      value: -2.0400002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7508b0d3471d35c54977db6c94c2ce4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6918,7 +6918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7508b0d3471d35c54977db6c94c2ce4a, type: 3}
       propertyPath: m_Name
-      value: palmen6_blender_mit_texture (1)
+      value: palme 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7268,7 +7268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7508b0d3471d35c54977db6c94c2ce4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4700005
+      value: -2.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7508b0d3471d35c54977db6c94c2ce4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7498,7 +7498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61d69819de7060153b149705a70a037e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4699994
+      value: -2.039999
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 61d69819de7060153b149705a70a037e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7534,7 +7534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 61d69819de7060153b149705a70a037e, type: 3}
       propertyPath: m_Name
-      value: palmen5_blender_mit_texture
+      value: palme 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
