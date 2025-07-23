@@ -273,7 +273,13 @@ public class BreathingApp : MonoBehaviour
     {
         isSessionActive = false;
         breathingCircle.localScale = Vector3.one;
+        volumeSlider.value = 1f; // Reset volume slider
+        currentPhase = Phase.Inhale;
+        lastPlayedPhase = Phase.Hold; // Last played phase for vocal instructions
+        phaseTimer = 0f;
         feedbackText.text = "Session Stopped.";
+        scoreText.text = "";
+        instructionText.text = "Press Start to begin again.";
         restartButton.gameObject.SetActive(true);
         startButton.gameObject.SetActive(true);
         if (!backgroundMusic.isPlaying)
@@ -284,7 +290,7 @@ public class BreathingApp : MonoBehaviour
 
     void RestartSession()
     {
-        breathingCircle.localScale = Vector3.one;
+        StopSession();
         StartSession();
     }
 
@@ -301,21 +307,25 @@ public class BreathingApp : MonoBehaviour
         switch (selectedExercise)
         {
             case "Box Breathing":
+                StopSession(); // Reset session state
                 InhalePhaseDuration = 4f;
                 HoldPhaseDuration = 0f;
                 ExhalePhaseDuration = 4f;
                 break;
             case "4-7-8 Method":
+                StopSession(); // Reset session state
                 InhalePhaseDuration = 4f;
                 HoldPhaseDuration = 7f;
                 ExhalePhaseDuration = 8f;
                 break;
             case "Coherent Breathing": 
+                StopSession(); // Reset session state
                 InhalePhaseDuration = 5f;
                 HoldPhaseDuration = 0f;
                 ExhalePhaseDuration = 5f;
                 break;
             case "Deep Breathing":
+                StopSession(); // Reset session state
                 InhalePhaseDuration = 4f;
                 HoldPhaseDuration = 4f;
                 ExhalePhaseDuration = 4f;
@@ -366,6 +376,7 @@ public class BreathingApp : MonoBehaviour
 
     public void GoToExerciseSelection()
     {
+        StopSession();
         if (vocalBool)
         {
             vocalInstructions.Play();
