@@ -2,13 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using UnityEngine.Android; // For microphone permissions
 
 public class MicrophoneSensitivity : MonoBehaviour
 {
 
     public Slider sensitivitySlider; // Drag the slider in the Unity editor
     public TMP_Text loudnessInfo;             // Shows the average Volume
-    public static float boost = 0.01f;
+    public static float boost = 1.0f;
     public TMP_Text boostInfo;
     private string micDevice;
     private AudioClip micClip;
@@ -23,6 +24,9 @@ public class MicrophoneSensitivity : MonoBehaviour
     {
         if (sensitivitySlider != null)
         {
+            sensitivitySlider.minValue = 1.0f;
+            sensitivitySlider.maxValue = 100.0f;
+            sensitivitySlider.value = 1.0f; // Startwert
             sensitivitySlider.value = boost; // Default sensitivity
             sensitivitySlider.onValueChanged.AddListener(v => boost = v); // ads a listener to the slider to increase the boost
         }
@@ -89,7 +93,7 @@ public class MicrophoneSensitivity : MonoBehaviour
 
         for (int i = 0; i < samples.Length; i++)
         {
-            float val = samples[i] + boost; // Apply the boost factor
+            float val = samples[i] * boost; // Apply the boost factor
             sum += Mathf.Abs(val);
             if (val > max) max = val;
             if (val < min) min = val;
@@ -97,7 +101,7 @@ public class MicrophoneSensitivity : MonoBehaviour
 
         float average = sum / samples.Length;
 
-        loudnessInfo.text = $"⏺️ Max: {max:F3} | Min: {min:F3} | ∅: {average:F3}";
+        loudnessInfo.text = $"Average Loudness: {average:F3}";
 
         if (average < 0.05f)
         {

@@ -54,7 +54,7 @@ public class BreathingApp : MonoBehaviour
 
     private string selectedExercise = "";     // Stores which breathing exercise was chosen
 
-    float gainFactor = 0.01f; // Gain factor for microphone sensitivity
+    float gainFactor = MicrophoneSensitivity.boost; // Gain factor for microphone sensitivity
     public static bool vocalBool = false; // Toggle for vocal instructions
     public AudioSource backgroundMusic;
     public AudioSource vocalInstructions; // Optional audio source for vocal instructions
@@ -69,10 +69,14 @@ public class BreathingApp : MonoBehaviour
     void Start()
     {
         {
-        if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
-        {
-            Permission.RequestUserPermission(Permission.Microphone);
-        }
+            if (!Permission.HasUserAuthorizedPermission(Permission.Microphone))
+            {
+                Permission.RequestUserPermission(Permission.Microphone);
+            }
+        
+        volumeSlider.minValue = 1.0f;
+        volumeSlider.maxValue = 100.0f;
+        volumeSlider.value = 1.0f; // Startwert
 }
         // Start with welcome panel visible
         vocalInstructions.clip = welcomeAudio;
@@ -110,7 +114,7 @@ public class BreathingApp : MonoBehaviour
 
         // Get microphone volume level
         float volume = GetMicVolume();
-        volumeSlider.value = volume;
+        volumeSlider.value = volume * gainFactor;
 
         // Handle breathing phase
         phaseTimer += Time.deltaTime;
@@ -192,11 +196,9 @@ public class BreathingApp : MonoBehaviour
 
         foreach (float sample in samples)
         {
-            float abs = Mathf.Abs(sample);
-            if (abs > 0.001f)
-                abs += gainFactor;
+            float abs = Mathf.Abs(sample) * gainFactor;
             if (abs > maxVolume) maxVolume = abs;
-        }
+        }       
         return maxVolume;
     }
 
