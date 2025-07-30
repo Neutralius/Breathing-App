@@ -41,7 +41,7 @@ public class MicrophoneSensitivity : MonoBehaviour
 
         if (micDevice == null)
         {
-            loudnessInfo.text = "Kein Mikrofon gefunden.";
+            loudnessInfo.text = "No microphone found.";
             enabled = false;
             return;
         }
@@ -54,7 +54,7 @@ public class MicrophoneSensitivity : MonoBehaviour
 
     void Update()
     {
-        boostInfo.text = $"Verstärkung: {boost:F2}";
+        boostInfo.text = $"Boost: {boost:F2}";
     }
 
     IEnumerator StartCal()
@@ -64,11 +64,11 @@ public class MicrophoneSensitivity : MonoBehaviour
             backgroundMusic.Stop();
         }
         isCalibrating = true;
-        micClip = Microphone.Start(micDevice, false, 3, 44100);  // Aufnahme startet
-        loudnessInfo.text = "Bitte ausatmen...";
+        micClip = Microphone.Start(micDevice, false, 3, 44100);
+        loudnessInfo.text = "PLease exhale...";
         
-        yield return new WaitForSeconds(3.1f);  // Warte, bis Aufnahme vorbei ist
-        GetLoudnessFromMicrophone();           // Jetzt analysieren
+        yield return new WaitForSeconds(3.1f);
+        GetLoudnessFromMicrophone();
         
         isCalibrating = false;
         if (!backgroundMusic.isPlaying)
@@ -82,7 +82,7 @@ public class MicrophoneSensitivity : MonoBehaviour
     {
         if (micClip == null)
         {
-            loudnessInfo.text = "Keine Aufnahme vorhanden.";
+            loudnessInfo.text = "No recording found.";
             return;
         }
 
@@ -105,11 +105,11 @@ public class MicrophoneSensitivity : MonoBehaviour
 
         if (average < 0.05f)
         {
-            loudnessInfo.text += "\n⚠️ Mikrofon ist zu leise!";
+            loudnessInfo.text += "\n⚠️ microphone is too silent!";
         }
         else
         {
-            loudnessInfo.text += "\n✅ Mikrofonpegel ist ausreichend.";
+            loudnessInfo.text += "\n✅ microphone adjusted!";
         }
     }    
 }
