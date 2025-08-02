@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: ae20678a90ef699e388a816269b62cb2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3180465792387524122
+    second: date palm leaf2_0
+  - first:
+      213: 5940465004535007297
+    second: date palm leaf2_1
+  - first:
+      213: 3282933431205762744
+    second: date palm leaf2_2
+  - first:
+      213: -2634694479147696514
+    second: date palm leaf2_3
+  - first:
+      213: -8579000826869708209
+    second: date palm leaf2_4
+  - first:
+      213: -6684840386151672941
+    second: date palm leaf2_5
+  - first:
+      213: 1839340062169007680
+    second: date palm leaf2_6
+  - first:
+      213: -5729033784522759078
+    second: date palm leaf2_7
+  - first:
+      213: -5406199749053670382
+    second: date palm leaf2_8
+  - first:
+      213: -7630951514429120651
+    second: date palm leaf2_9
+  - first:
+      213: -3028561629556814216
+    second: date palm leaf2_10
+  - first:
+      213: 7122754978070467704
+    second: date palm leaf2_11
+  - first:
+      213: -9496476964513035
+    second: date palm leaf2_12
+  - first:
+      213: -5838679372412544778
+    second: date palm leaf2_13
+  - first:
+      213: -855803948498416224
+    second: date palm leaf2_14
+  - first:
+      213: 5115046024892659082
+    second: date palm leaf2_15
+  - first:
+      213: 471368048632649948
+    second: date palm leaf2_16
+  - first:
+      213: 5783887820449783866
+    second: date palm leaf2_17
+  - first:
+      213: -3722319909360939618
+    second: date palm leaf2_18
+  - first:
+      213: -33396746352579186
+    second: date palm leaf2_19
+  - first:
+      213: 409774763920694522
+    second: date palm leaf2_20
+  - first:
+      213: -504406729183933971
+    second: date palm leaf2_21
+  - first:
+      213: 4597491588206943555
+    second: date palm leaf2_22
+  - first:
+      213: 5619512299773364840
+    second: date palm leaf2_23
+  - first:
+      213: -1911916691532994822
+    second: date palm leaf2_24
+  - first:
+      213: 9004840219345441073
+    second: date palm leaf2_25
+  - first:
+      213: 6573929575662159722
+    second: date palm leaf2_26
+  - first:
+      213: 661514712261313843
+    second: date palm leaf2_27
+  - first:
+      213: -7820242429167198781
+    second: date palm leaf2_28
+  - first:
+      213: 6218579932775665710
+    second: date palm leaf2_29
+  - first:
+      213: 2992551727487866742
+    second: date palm leaf2_30
+  - first:
+      213: -8850700394126746213
+    second: date palm leaf2_31
+  - first:
+      213: -7918243228335364440
+    second: date palm leaf2_32
+  - first:
+      213: 658607548893182384
+    second: date palm leaf2_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: date palm leaf2_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 948
+        width: 370
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a162a8f89c8432c20800000000000000
+      internalID: 3180465792387524122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_1
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 0
+        width: 18
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 148c2fb9275c07250800000000000000
+      internalID: 5940465004535007297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_2
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 971
+        width: 315
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6164cdf825f8d20800000000000000
+      internalID: 3282933431205762744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_3
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 913
+        width: 446
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ef7b6945faf6bd0800000000000000
+      internalID: -2634694479147696514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_4
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 896
+        width: 354
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a06a2933441f880800000000000000
+      internalID: -8579000826869708209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 870
+        width: 243
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3939e3b261daa33a0800000000000000
+      internalID: -6684840386151672941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_6
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 862
+        width: 447
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0468ab29a06a68910800000000000000
+      internalID: 1839340062169007680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_7
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 819
+        width: 448
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a542f4f60226e70b0800000000000000
+      internalID: -5729033784522759078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_8
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 802
+        width: 237
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21c99d4b8f159f4b0800000000000000
+      internalID: -5406199749053670382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_9
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 761
+        width: 227
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f1934370a691690800000000000000
+      internalID: -7630951514429120651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_10
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 724
+        width: 229
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e43e17e3368f5d0800000000000000
+      internalID: -3028561629556814216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_11
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 675
+        width: 366
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87419022aeb19d260800000000000000
+      internalID: 7122754978070467704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_12
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 665
+        width: 342
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa99e721034edff0800000000000000
+      internalID: -9496476964513035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_13
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 640
+        width: 227
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f813f1ab08d8fea0800000000000000
+      internalID: -5838679372412544778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_14
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 605
+        width: 432
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad0064d7d29f14f0800000000000000
+      internalID: -855803948498416224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_15
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 601
+        width: 411
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85308b424b4cf640800000000000000
+      internalID: 5115046024892659082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_16
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 577
+        width: 334
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd8d7392eb2aa8600800000000000000
+      internalID: 471368048632649948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_17
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 537
+        width: 353
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a302e9e045f744050800000000000000
+      internalID: 5783887820449783866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_18
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 492
+        width: 419
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d4d2e93c9a75cc0800000000000000
+      internalID: -3722319909360939618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_19
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 442
+        width: 395
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d200d06d9598ff0800000000000000
+      internalID: -33396746352579186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_20
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 381
+        width: 381
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc99690affcfa500800000000000000
+      internalID: 409774763920694522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_21
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 346
+        width: 341
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de9cca490ccfff8f0800000000000000
+      internalID: -504406729183933971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_22
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 373
+        width: 425
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34ddbecad329dcf30800000000000000
+      internalID: 4597491588206943555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_23
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 303
+        width: 411
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a0ee6c9a48cfd40800000000000000
+      internalID: 5619512299773364840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_24
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 298
+        width: 378
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6290916e18775e0800000000000000
+      internalID: -1911916691532994822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_25
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 247
+        width: 429
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1315c35487e97fc70800000000000000
+      internalID: 9004840219345441073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 209
+        width: 239
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6707cf6e1a4b3b50800000000000000
+      internalID: 6573929575662159722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_27
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 164
+        width: 323
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 335c70e302c2e2900800000000000000
+      internalID: 661514712261313843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_28
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 101
+        width: 427
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd1d00b1fae87390800000000000000
+      internalID: -7820242429167198781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_29
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 117
+        width: 322
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e20577c5085dc4650800000000000000
+      internalID: 6218579932775665710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_30
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 74
+        width: 415
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67755e0e0fda78920800000000000000
+      internalID: 2992551727487866742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_31
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 56
+        width: 447
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9d5aa272eefb2580800000000000000
+      internalID: -8850700394126746213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_32
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 30
+        width: 243
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6ade98cbfbc1290800000000000000
+      internalID: -7918243228335364440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: date palm leaf2_33
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 8
+        width: 328
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b93b268318d32900800000000000000
+      internalID: 658607548893182384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      date palm leaf2_0: 3180465792387524122
+      date palm leaf2_1: 5940465004535007297
+      date palm leaf2_10: -3028561629556814216
+      date palm leaf2_11: 7122754978070467704
+      date palm leaf2_12: -9496476964513035
+      date palm leaf2_13: -5838679372412544778
+      date palm leaf2_14: -855803948498416224
+      date palm leaf2_15: 5115046024892659082
+      date palm leaf2_16: 471368048632649948
+      date palm leaf2_17: 5783887820449783866
+      date palm leaf2_18: -3722319909360939618
+      date palm leaf2_19: -33396746352579186
+      date palm leaf2_2: 3282933431205762744
+      date palm leaf2_20: 409774763920694522
+      date palm leaf2_21: -504406729183933971
+      date palm leaf2_22: 4597491588206943555
+      date palm leaf2_23: 5619512299773364840
+      date palm leaf2_24: -1911916691532994822
+      date palm leaf2_25: 9004840219345441073
+      date palm leaf2_26: 6573929575662159722
+      date palm leaf2_27: 661514712261313843
+      date palm leaf2_28: -7820242429167198781
+      date palm leaf2_29: 6218579932775665710
+      date palm leaf2_3: -2634694479147696514
+      date palm leaf2_30: 2992551727487866742
+      date palm leaf2_31: -8850700394126746213
+      date palm leaf2_32: -7918243228335364440
+      date palm leaf2_33: 658607548893182384
+      date palm leaf2_4: -8579000826869708209
+      date palm leaf2_5: -6684840386151672941
+      date palm leaf2_6: 1839340062169007680
+      date palm leaf2_7: -5729033784522759078
+      date palm leaf2_8: -5406199749053670382
+      date palm leaf2_9: -7630951514429120651
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
