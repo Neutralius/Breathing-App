@@ -378,7 +378,10 @@ public class BreathingApp : MonoBehaviour
         StopSession();
         ShowPanel(exerciseSelectionPanel); // Navigate from welcome to exercise choice
         vocalInstructions.clip = welcomeAudio;
-        vocalInstructions.Play();
+        if (vocalBool)
+        {
+            vocalInstructions.Play();
+        }
     }
 
     public void GoToWelcome()
