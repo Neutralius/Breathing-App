@@ -690,7 +690,7 @@ Transform:
   m_GameObject: {fileID: 269732438}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1815,11 +1815,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 480142371827128311, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.32717
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 480142371827128311, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.53
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 480142371827128311, guid: d7d78274f1e7b8b2097da151d473d07e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3063,7 +3063,7 @@ MonoBehaviour:
   helpButton4: {fileID: 1631935812}
   closeButton: {fileID: 740139621}
   audioSource: {fileID: 417497692}
-  helpAudio: {fileID: 8300000, guid: 84b698522779c847f8ff617b8bf2db57, type: 3}
+  helpAudio: {fileID: 8300000, guid: 2efd60ab037851a4385c3f3f8404b1c1, type: 3}
   helpPanel: {fileID: 503912548}
   vocalBool: 0
 --- !u!1001 &603511614
@@ -6016,13 +6016,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1546508371}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0000000042452775, y: -0.91622967, z: 0.0000000021860227, w: 0.40065348}
-  m_LocalPosition: {x: 6.034719, y: 1.5, z: 1.6580001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -132.762, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1574559277
 GameObject:
   m_ObjectHideFlags: 0
@@ -6530,7 +6530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9372549, g: 0.8509804, b: 0.58431375, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

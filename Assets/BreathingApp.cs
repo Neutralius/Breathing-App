@@ -79,7 +79,6 @@ public class BreathingApp : MonoBehaviour
         volumeSlider.value = 1.0f; // Startwert
 }
         // Start with welcome panel visible
-        vocalInstructions.clip = welcomeAudio;
         ShowPanel(welcomePanel);
         HideAllExcept(welcomePanel);
         SetupButtons();
@@ -378,6 +377,8 @@ public class BreathingApp : MonoBehaviour
     {
         StopSession();
         ShowPanel(exerciseSelectionPanel); // Navigate from welcome to exercise choice
+        vocalInstructions.clip = welcomeAudio;
+        vocalInstructions.Play();
     }
 
     public void GoToWelcome()

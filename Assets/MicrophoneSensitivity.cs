@@ -65,7 +65,7 @@ public class MicrophoneSensitivity : MonoBehaviour
         }
         isCalibrating = true;
         micClip = Microphone.Start(micDevice, false, 3, 44100);
-        loudnessInfo.text = "PLease exhale...";
+        loudnessInfo.text = "Please exhale...";
         
         yield return new WaitForSeconds(3.1f);
         GetLoudnessFromMicrophone();
